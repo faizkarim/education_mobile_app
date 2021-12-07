@@ -93,6 +93,7 @@ class _QuizQuestion extends State<QuizQuestion> {
                         textAlign: TextAlign.center,
                       ),
                     ),
+                    Text('data'),
                     SizedBox(
                       height: AppSize.spaceX4,
                     ),

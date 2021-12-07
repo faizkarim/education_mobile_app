@@ -109,21 +109,19 @@ class _QuizQuestion extends State<QuizQuestion> {
                           .answer
                           .length,
                       itemBuilder: (_, i) {
+                        final correctAnswer = widget
+                            .selectedQuiz
+                            .questions[quizCont.currentQuestionIndex.value]
+                            .correctAnswer;
+
+                        final answer = widget
+                            .selectedQuiz
+                            .questions[quizCont.currentQuestionIndex.value]
+                            .answer[i];
+
                         return GestureDetector(
                           onTap: () {
-                            quizCont.checkAnswer(
-                              widget
-                                  .selectedQuiz
-                                  .questions[
-                                      quizCont.currentQuestionIndex.value]
-                                  .correctAnswer,
-                              widget
-                                  .selectedQuiz
-                                  .questions[
-                                      quizCont.currentQuestionIndex.value]
-                                  .answer[i],
-                            );
-
+                            quizCont.checkAnswer(correctAnswer, answer);
                             quizCont.nextQuestion(
                               widget.selectedQuiz.questions.length,
                               quizCont.currentQuestionIndex.value,

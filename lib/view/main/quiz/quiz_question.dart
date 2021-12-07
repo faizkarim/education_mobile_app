@@ -98,7 +98,6 @@ class _QuizQuestion extends State<QuizQuestion> {
                     Text('data2'),
                     Text('data2'),
                     Text('data2'),
-                    Text('data2'),
                     SizedBox(
                       height: AppSize.spaceX4,
                     ),
